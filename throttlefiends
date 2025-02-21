@@ -1,0 +1,79 @@
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+
+export default function ThrottleFiends() {
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Header Section */}
+      <header className="flex justify-between items-center p-6 border-b border-gray-700">
+        <h1 className="text-3xl font-bold">Throttle Fiends</h1>
+        <nav className="space-x-4">
+          <a href="#shop" className="hover:text-neon-green">Shop</a>
+          <a href="#about" className="hover:text-neon-green">About</a>
+          <a href="#contact" className="hover:text-neon-green">Contact</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900">
+        <h2 className="text-5xl font-extrabold mb-4">Ride. Break Limits. Repeat.</h2>
+        <p className="text-lg mb-6">Rugged gear for the next-gen electric dirt bike rebels.</p>
+        <Button className="bg-neon-green text-black px-6 py-3 rounded-2xl">Shop Now</Button>
+      </section>
+
+      {/* Featured Products */}
+      <section id="shop" className="py-16 px-6">
+        <h3 className="text-4xl font-bold text-center mb-8">Featured Gear</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card>
+            <CardContent className="p-4">
+              <img src="/images/hoodie.jpg" alt="Throttle Fiends Hoodie" className="rounded-lg mb-4" />
+              <h4 className="text-2xl font-semibold">Rugged Hoodie</h4>
+              <p>Stay warm, ride hard.</p>
+              <Button className="mt-4 w-full bg-neon-green text-black">Buy Now</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <img src="/images/goggles.jpg" alt="Riding Goggles" className="rounded-lg mb-4" />
+              <h4 className="text-2xl font-semibold">Riding Goggles</h4>
+              <p>See every twist and turn.</p>
+              <Button className="mt-4 w-full bg-neon-green text-black">Buy Now</Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <img src="/images/grips.jpg" alt="Custom Grips" className="rounded-lg mb-4" />
+              <h4 className="text-2xl font-semibold">Custom Grips</h4>
+              <p>Hold tight, throttle harder.</p>
+              <Button className="mt-4 w-full bg-neon-green text-black">Buy Now</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 bg-gray-800 px-6">
+        <h3 className="text-4xl font-bold text-center mb-8">About Throttle Fiends</h3>
+        <p className="max-w-3xl mx-auto text-center">Throttle Fiends is more than a brand—it's a movement for those who crave speed, live for adventure, and demand gear that matches their untamed spirit. Born for electric dirt bike rebels, we push the limits of style and performance.</p>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-6">
+        <h3 className="text-4xl font-bold text-center mb-8">Get in Touch</h3>
+        <form className="max-w-lg mx-auto space-y-4">
+          <input type="text" placeholder="Name" className="w-full p-3 rounded-lg bg-gray-700 text-white" />
+          <input type="email" placeholder="Email" className="w-full p-3 rounded-lg bg-gray-700 text-white" />
+          <textarea placeholder="Message" className="w-full p-3 rounded-lg bg-gray-700 text-white" rows="4"></textarea>
+          <Button className="w-full bg-neon-green text-black">Send Message</Button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-6 bg-gray-900 text-center">
+        <p>&copy; 2025 Throttle Fiends. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
